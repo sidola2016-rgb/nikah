@@ -1,0 +1,111 @@
+Berikut adalah kode HTML yang sudah diperbarui dengan **menghapus bagian galeri/upload foto**:
+
+```html
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Undangan Pernikahan Winda & Desfri</title>
+    <style>
+        /* Desain & Tampilan (CSS) */
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #fcf8f2;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #ffffff;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        h1 {
+            color: #d4a373;
+            font-size: 2.2em;
+            margin-bottom: 5px;
+        }
+        h2 {
+            color: #555;
+            font-weight: normal;
+        }
+
+        .date-box, .gift-box {
+            background-color: #faedcd;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #d4a373;
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #ccd5ae;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <p style="letter-spacing: 2px; color: #888;">UNDANGAN PERNIKAHAN</p>
+        <h1>Winda Fadilla &<br>Rd M Desfrikalingga</h1>
+        <p>Dengan memohon rahmat Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk menghadiri acara pernikahan kami.</p>
+
+        <div class="date-box">
+            <h3>Acara Pernikahan</h3>
+            <p><strong>Hari / Tanggal:</strong> Rabu, 27 Januari 2027</p>
+            <p><strong>Waktu:</strong> 11.00 WIB - Selesai</p>
+            <p><strong>Lokasi:</strong> Kilogram Kopi Lembang</p>
+            
+            <!-- Tombol Lokasi Peta Google Maps -->
+            <a href="https://maps.app.goo.gl/cxXDQZoM6gGzNeE76" target="_blank" class="btn">Lihat Lokasi di Google Maps</a>
+        </div>
+
+        <p>Merupakan suatu kehormatan dan kebahagiaan bagi kami apabila Bapak/Ibu/Saudara/i berkenan hadir.</p>
+        
+        <!-- Bagian Hadiah Pernikahan (Amplop Digital) -->
+        <div class="gift-box">
+            <h3>Hadiah Pernikahan</h3>
+            <p>Bagi keluarga dan kerabat yang ingin memberikan tanda kasih, dapat mengirimkan melalui:</p>
+            <p style="font-size: 1.1em; margin-bottom: 5px;"><strong>No. Rekening:</strong> <span id="norek">9999999</span></p>
+            <p style="margin-top: 0;"><strong>a.n. Rd M Desfrikalingga</strong></p>
+            
+            <!-- Tombol Salin Nomor Rekening -->
+            <button class="btn" onclick="salinRekening()">Salin No. Rekening</button>
+        </div>
+    </div>
+
+    <!-- Script JavaScript untuk Fungsi Klik Salin Rekening -->
+    <script>
+        function salinRekening() {
+            var noRek = document.getElementById("norek").innerText;
+            navigator.clipboard.writeText(noRek).then(function() {
+                alert("Nomor rekening (" + noRek + ") berhasil disalin!");
+            }, function(err) {
+                alert("Gagal menyalin nomor rekening.");
+            });
+        }
+    </script>
+
+</body>
+</html>
+
+```
